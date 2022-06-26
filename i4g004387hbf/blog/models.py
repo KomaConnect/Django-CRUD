@@ -3,8 +3,6 @@ from django.contrib.auth import get_user_model
 from django.utils import timezone
 from django.urls import reverse
 from django.template.defaultfilters import slugify
-# Create your models here.
-
 
 class Post(models.Model):
 
@@ -24,7 +22,6 @@ class Post(models.Model):
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-
     status = models.CharField(
         max_length=10, choices=STATUS_CHOICES, default="draft"
     )
